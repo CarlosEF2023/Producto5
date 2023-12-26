@@ -1,10 +1,8 @@
-package controlador;
+package com.onlinestore.onlinestore_producto5.controlador;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.event.ActionEvent;
-import java.net.URL;
-import java.util.ResourceBundle;
 
 
 public class HelloController {
