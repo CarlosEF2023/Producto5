@@ -1,11 +1,21 @@
 package com.onlinestore.onlinestore_producto5.controlador;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.event.ActionEvent;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+import javafx.scene.Parent;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 
-public class controladorMenu {
+public class controladorMenu implements Initializable  {
 
     @FXML
     void clk_acercade(ActionEvent event) {
@@ -53,8 +63,13 @@ public class controladorMenu {
     }
 
     @FXML
-    void clk_insertararticulo(ActionEvent event) {
-
+    void clk_insertararticulo(ActionEvent event) throws IOException {
+        Stage stage = null;
+        Parent root;
+        root = FXMLLoader.load(getClass().getResource("frm_articulo.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
@@ -124,5 +139,8 @@ public class controladorMenu {
 
     }
 
+    public void initialize(URL location, ResourceBundle resources){
+        // Podemos crear los eventos aquí dentro.
+    }
 
 }

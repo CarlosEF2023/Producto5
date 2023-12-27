@@ -7,10 +7,7 @@
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="927.0"
-            xmlns="http://javafx.com/javafx/21"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.onlinestore.onlinestore_producto5.controlador.controladorMenu">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="927.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.onlinestore.onlinestore_producto5.controlador.controladorMenu">
    <effect>
       <DropShadow />
    </effect>
@@ -19,38 +16,38 @@
         <menus>
           <Menu id="mnu_Articulo" mnemonicParsing="false" text="Artículo">
             <items>
-              <MenuItem id="InsertarArticulo" mnemonicParsing="false" onAction="#clk_insertararticulo" text="Insertar Artículo" />
-                  <MenuItem id="EliminarArticulo" mnemonicParsing="false" onAction="#clk_eliminararticulo" text="Eliminar Artículo" />
-                  <MenuItem id="EditarArticulo" mnemonicParsing="false" onAction="#clk_editararticulo" text="Editar Artículo" />
-                  <MenuItem id="BuscarArticulo" mnemonicParsing="false" onAction="#clk_buscararticulo" text="Buscar Artículo" />
-                  <MenuItem id="mostrarTodosArticulo" mnemonicParsing="false" onAction="#clk_mostrartodosarticulos" text="Mostrar todos los artículos" />
+              <MenuItem id="InsertarArticulo" fx:id="mnu_insertararticulo" mnemonicParsing="false" onAction="#clk_insertararticulo" text="Insertar Artículo" />
+                  <MenuItem id="EliminarArticulo" fx:id="mnu_eliminararticulo" mnemonicParsing="false" onAction="#clk_eliminararticulo" text="Eliminar Artículo" />
+                  <MenuItem id="EditarArticulo" fx:id="mnu_editararticulo" mnemonicParsing="false" onAction="#clk_editararticulo" text="Editar Artículo" />
+                  <MenuItem id="BuscarArticulo" fx:id="mnu_buscararticulo" mnemonicParsing="false" onAction="#clk_buscararticulo" text="Buscar Artículo" />
+                  <MenuItem id="mostrarTodosArticulo" fx:id="mnu_mostrararticulos" mnemonicParsing="false" onAction="#clk_mostrartodosarticulos" text="Mostrar todos los artículos" />
             </items>
           </Menu>
           <Menu id="mnu_Cliente" mnemonicParsing="false" text="Cliente">
             <items>
-                  <MenuItem id="InsertarCliente" mnemonicParsing="false" onAction="#clk_insertarcliente" text="Insertar Cliente" />
-                  <MenuItem id="EliminarCliente" mnemonicParsing="false" onAction="#clk_eliminarcliente" text="Eliminar Cliente" />
-                  <MenuItem id="BuscarCliente" mnemonicParsing="false" onAction="#clk_buscarcliente" text="MostrarCliente" />
-                  <MenuItem id="ListarPremium" mnemonicParsing="false" onAction="#clk_listapremium" text="Mostrar Clientes Premium" />
-                  <MenuItem id="ListarEstandar" mnemonicParsing="false" onAction="#clk_listaestandar" text="Mostrar Clientes Estandar" />
-                  <MenuItem id="EditarCliente" mnemonicParsing="false" onAction="#clk_editarcliente" text="Editar Cliente" />
-              <MenuItem id="MostrarTodosClientes" mnemonicParsing="false" onAction="#clk_mostrartodosclientes" text="Mostrar Clientes" />
+                  <MenuItem id="InsertarCliente" fx:id="mnu_insertarcliente" mnemonicParsing="false" onAction="#clk_insertarcliente" text="Insertar Cliente" />
+                  <MenuItem id="EditarCliente" fx:id="mnu_editarcliente" mnemonicParsing="false" onAction="#clk_editarcliente" text="Editar Cliente" />
+                  <MenuItem id="EliminarCliente" fx:id="mnu_eliminarcliente" mnemonicParsing="false" onAction="#clk_eliminarcliente" text="Eliminar Cliente" />
+                  <MenuItem id="BuscarCliente" fx:id="mnu_buscarcliente" mnemonicParsing="false" onAction="#clk_buscarcliente" text="MostrarCliente" />
+                  <MenuItem id="ListarPremium" fx:id="mnu_listarpremium" mnemonicParsing="false" onAction="#clk_listapremium" text="Mostrar Clientes Premium" />
+                  <MenuItem id="ListarEstandar" fx:id="mnu_listarestandar" mnemonicParsing="false" onAction="#clk_listaestandar" text="Mostrar Clientes Estandar" />
+              <MenuItem id="MostrarTodosClientes" fx:id="mnu_listartodosclientes" mnemonicParsing="false" onAction="#clk_mostrartodosclientes" text="Mostrar Clientes" />
             </items>
           </Menu>
           <Menu id="mnu_Pedidos" mnemonicParsing="false" text="Pedido">
             <items>
-              <MenuItem id="InsertarPedido" mnemonicParsing="false" onAction="#clk_insertarpedido" text="Insertar Pedido" />
-                  <MenuItem id="EliminarPedido" mnemonicParsing="false" onAction="#clk_eliminarpedido" text="Eliminar Pedido" />
-                  <MenuItem id="BuscarPedido" mnemonicParsing="false" onAction="#clk_buscarpedido" text="BuscarPedido" />
-                  <MenuItem id="ListarPendientes" mnemonicParsing="false" onAction="#clk_listarpendientes" text="Listar Pedidos Pendientes " />
-                  <MenuItem id="ListarEnviados" mnemonicParsing="false" onAction="#clk_listarenviados" text="Listar Pedidos Enviados" />
-                  <MenuItem id="MostrarTodosPedidos" mnemonicParsing="false" onAction="#clk_mostrartodospedidos" text="Mostrar Pedidos" />
+              <MenuItem id="InsertarPedido" fx:id="mnu_insertarpedido" mnemonicParsing="false" onAction="#clk_insertarpedido" text="Insertar Pedido" />
+                  <MenuItem id="EliminarPedido" fx:id="mnu_editarpedido" mnemonicParsing="false" onAction="#clk_eliminarpedido" text="Eliminar Pedido" />
+                  <MenuItem id="BuscarPedido" fx:id="mnu_buscarpedido" mnemonicParsing="false" onAction="#clk_buscarpedido" text="BuscarPedido" />
+                  <MenuItem id="ListarPendientes" fx:id="mnu_listarpendientes" mnemonicParsing="false" onAction="#clk_listarpendientes" text="Listar Pedidos Pendientes " />
+                  <MenuItem id="ListarEnviados" fx:id="mnu_listarenviados" mnemonicParsing="false" onAction="#clk_listarenviados" text="Listar Pedidos Enviados" />
+                  <MenuItem id="MostrarTodosPedidos" fx:id="mnu_listartodospedidos" mnemonicParsing="false" onAction="#clk_mostrartodospedidos" text="Mostrar Pedidos" />
             </items>
           </Menu>
             <Menu mnemonicParsing="false" text="Salir">
               <items>
-                <MenuItem id="AcercaDe" mnemonicParsing="false" onAction="#clk_acercade" text="Acerca de..." />
-                  <MenuItem id="Salir" mnemonicParsing="false" onAction="#clk_salir" text="Cerrar aplicación" />
+                <MenuItem id="AcercaDe" fx:id="mnu_acercade" mnemonicParsing="false" onAction="#clk_acercade" text="Acerca de..." />
+                  <MenuItem id="Salir" fx:id="mnu_salir" mnemonicParsing="false" onAction="#clk_salir" text="Cerrar aplicación" />
               </items>
             </Menu>
         </menus>
