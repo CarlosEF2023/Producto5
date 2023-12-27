@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="927.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.Controlador">
+   <effect>
+      <DropShadow />
+   </effect>
+   <children>
+      <MenuBar layoutY="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu id="mnu_Articulo" mnemonicParsing="false" text="Artículo">
+            <items>
+              <MenuItem id="InsertarArticulo" mnemonicParsing="false" onAction="#clk_insertararticulo" text="Insertar Artículo" />
+                  <MenuItem id="EliminarArticulo" mnemonicParsing="false" onAction="#clk_eliminararticulo" text="Eliminar Artículo" />
+                  <MenuItem id="EditarArticulo" mnemonicParsing="false" onAction="#clk_editararticulo" text="Editar Artículo" />
+                  <MenuItem id="BuscarArticulo" mnemonicParsing="false" onAction="#clk_buscararticulo" text="Buscar Artículo" />
+                  <MenuItem id="mostrarTodosArticulo" mnemonicParsing="false" onAction="#clk_mostrartodosarticulos" text="Mostrar todos los artículos" />
+            </items>
+          </Menu>
+          <Menu id="mnu_Cliente" mnemonicParsing="false" text="Cliente">
+            <items>
+                  <MenuItem id="InsertarCliente" mnemonicParsing="false" onAction="#clk_insertarcliente" text="Insertar Cliente" />
+                  <MenuItem id="EliminarCliente" mnemonicParsing="false" onAction="#clk_eliminarcliente" text="Eliminar Cliente" />
+                  <MenuItem id="BuscarCliente" mnemonicParsing="false" onAction="#clk_buscarcliente" text="MostrarCliente" />
+                  <MenuItem id="ListarPremium" mnemonicParsing="false" onAction="#clk_listapremium" text="Mostrar Clientes Premium" />
+                  <MenuItem id="ListarEstandar" mnemonicParsing="false" onAction="#clk_listaestandar" text="Mostrar Clientes Estandar" />
+                  <MenuItem id="EditarCliente" mnemonicParsing="false" onAction="#clk_editarcliente" text="Editar Cliente" />
+              <MenuItem id="MostrarTodosClientes" mnemonicParsing="false" onAction="#clk_mostrartodosclientes" text="Mostrar Clientes" />
+            </items>
+          </Menu>
+          <Menu id="mnu_Pedidos" mnemonicParsing="false" text="Pedido">
+            <items>
+              <MenuItem id="InsertarPedido" mnemonicParsing="false" onAction="#clk_insertarpedido" text="Insertar Pedido" />
+                  <MenuItem id="EliminarPedido" mnemonicParsing="false" onAction="#clk_eliminarpedido" text="Eliminar Pedido" />
+                  <MenuItem id="BuscarPedido" mnemonicParsing="false" onAction="#clk_buscarpedido" text="BuscarPedido" />
+                  <MenuItem id="ListarPendientes" mnemonicParsing="false" onAction="#clk_listarpendientes" text="Listar Pedidos Pendientes " />
+                  <MenuItem id="ListarEnviados" mnemonicParsing="false" onAction="#clk_listarenviados" text="Listar Pedidos Enviados" />
+                  <MenuItem id="MostrarTodosPedidos" mnemonicParsing="false" onAction="#clk_mostrartodospedidos" text="Mostrar Pedidos" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Salir">
+              <items>
+                <MenuItem id="AcercaDe" mnemonicParsing="false" onAction="#clk_acercade" text="Acerca de..." />
+                  <MenuItem id="Salir" mnemonicParsing="false" onAction="#clk_salir" text="Cerrar aplicación" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <SplitPane layoutX="244.0" layoutY="178.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+         <items>
+            <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="355.0" prefWidth="925.0" />
+              </items>
+            </SplitPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
