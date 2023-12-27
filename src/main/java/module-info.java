@@ -1,4 +1,4 @@
-module com.onlinestore.onlinestore_producto5 {
+module com.onlinestore.onlinestore_producto {
     requires javafx.controls;
     requires javafx.fxml;
 
@@ -8,4 +8,8 @@ module com.onlinestore.onlinestore_producto5 {
 
     opens com.onlinestore.onlinestore_producto5 to javafx.fxml;
     exports com.onlinestore.onlinestore_producto5;
+    exports com.onlinestore.onlinestore_producto5.vista;
+    opens com.onlinestore.onlinestore_producto5.vista to javafx.fxml;
+    exports com.onlinestore.onlinestore_producto5.controlador;
+    opens com.onlinestore.onlinestore_producto5.controlador to javafx.fxml;
 }

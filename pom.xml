@@ -57,6 +57,16 @@
           <artifactId>hibernate-core</artifactId>
           <version>6.4.0.Final</version>
       </dependency>
+      <dependency>
+          <groupId>org.openjfx</groupId>
+          <artifactId>javafx-fxml</artifactId>
+          <version>22-ea+16</version>
+      </dependency>
+      <dependency>
+          <groupId>org.openjfx</groupId>
+          <artifactId>javafx-graphics</artifactId>
+          <version>22-ea+16</version>
+      </dependency>
   </dependencies>
 
   <build>
@@ -79,7 +89,7 @@
             <!-- Default configuration for running with: mvn clean javafx:run -->
             <id>default-cli</id>
             <configuration>
-              <mainClass>com.onlinestore.onlinestore_producto5/com.onlinestore.onlinestore_producto5.HelloApplication</mainClass>
+              <mainClass>com.onlinestore.onlinestore_producto5/com.onlinestore.onlinestore_producto5.vista.GestionOS</mainClass>
               <launcher>app</launcher>
               <jlinkZipName>app</jlinkZipName>
               <jlinkImageName>app</jlinkImageName>

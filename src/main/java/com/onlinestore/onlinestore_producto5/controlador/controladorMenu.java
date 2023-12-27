@@ -5,14 +5,8 @@ import javafx.scene.control.Label;
 import javafx.event.ActionEvent;
 
 
-public class HelloController {
-    @FXML
-    private Label welcomeText;
+public class controladorMenu {
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
     @FXML
     void clk_acercade(ActionEvent event) {
 
@@ -112,5 +106,23 @@ public class HelloController {
     void clk_salir(ActionEvent event) {
 
     }
+
+
+    // -----------------------------
+    @FXML
+    void clk_articulo(ActionEvent event) {
+
+    }
+
+    @FXML
+    void clk_cliente(ActionEvent event) {
+
+    }
+
+    @FXML
+    void clk_pedido(ActionEvent event) {
+
+    }
+
 
 }
