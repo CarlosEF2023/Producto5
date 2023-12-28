@@ -14,21 +14,27 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="77.0" prefWidth="598.0">
                <children>
-                  <Label layoutX="22.0" layoutY="18.0" text="Buscar artículo" />
-                  <TextField fx:id="txt_buscararticulo" layoutX="116.0" layoutY="14.0" />
-                  <Button fx:id="btn_buscararticulo" layoutX="273.0" layoutY="14.0" mnemonicParsing="false" onAction="#clk_buscararticulo" text="Buscar" />
+                  <Label layoutX="22.0" layoutY="18.0" text="Buscar artículo">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font></Label>
+                  <TextField fx:id="txt_buscararticulo" layoutX="116.0" layoutY="14.0" prefHeight="26.0" prefWidth="394.0" />
+                  <Button fx:id="btn_buscararticulo" layoutX="522.0" layoutY="14.0" mnemonicParsing="false" onAction="#clk_buscararticulo" text="Buscar">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font></Button>
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <ListView layoutX="111.0" layoutY="38.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <ListView layoutX="111.0" layoutY="38.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
                </children>
             </AnchorPane>
         </items>
       </SplitPane>
       <Label layoutX="14.0" text="Listar artículos">
          <font>
-            <Font name="System Bold" size="26.0" />
+            <Font name="Arial Bold" size="27.0" />
          </font>
       </Label>
    </children>

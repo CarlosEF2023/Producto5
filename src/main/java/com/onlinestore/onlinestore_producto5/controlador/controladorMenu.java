@@ -5,9 +5,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -77,12 +77,12 @@ public class controladorMenu implements Initializable  {
 
     @FXML
     void clk_insertarcliente(ActionEvent event) throws IOException {
-        switchscene(event, "/frmcliente.fxml");
+        switchscene(event, "/frmaltacliente.fxml");
     }
 
     @FXML
     void clk_insertarpedido(ActionEvent event) throws IOException {
-        switchscene(event, "/frmpedido.fxml");
+        switchscene(event, "/frmaltapedido.fxml");
     }
 
     @FXML
@@ -112,12 +112,12 @@ public class controladorMenu implements Initializable  {
 
     @FXML
     void clk_mostrartodosclientes(ActionEvent event) throws IOException {
-        switchscene(event, "/frmmostrarclientes.fxml");
+        switchscene(event, "/frmlistarclientes.fxml");
     }
 
     @FXML
     void clk_mostrartodospedidos(ActionEvent event) throws IOException {
-        switchscene(event, "/frmmostrarclientes.fxml");
+        switchscene(event, "/frmlistarclientes.fxml");
     }
 
     @FXML
@@ -153,6 +153,8 @@ public class controladorMenu implements Initializable  {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(formulario));
             root = loader.load();
             scene = new Scene(root);
+            Image icon = new Image("logo.jpeg");
+            stage.getIcons().add(icon);
             stage.setScene(scene);
             stage.show();
 

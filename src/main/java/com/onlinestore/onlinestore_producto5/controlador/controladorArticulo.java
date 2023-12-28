@@ -40,6 +40,12 @@ public class controladorArticulo implements Initializable {
 
     }
 
+    @FXML
+    void clk_crearArticulo(ActionEvent event) {
+
+    }
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
