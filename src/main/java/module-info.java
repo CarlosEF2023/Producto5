@@ -5,6 +5,7 @@ module com.onlinestore.onlinestore_producto {
     requires com.dlsc.formsfx;
     requires jakarta.persistence;
     requires org.hibernate.orm.core;
+    requires java.naming;
 
     opens com.onlinestore.onlinestore_producto5 to javafx.fxml;
     exports com.onlinestore.onlinestore_producto5;
