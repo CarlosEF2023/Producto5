@@ -63,6 +63,11 @@
           <version>6.4.0.Final</version>
       </dependency>
       <dependency>
+          <groupId>ch.qos.logback</groupId>
+          <artifactId>logback-classic</artifactId>
+          <version>1.4.8</version> <!-- Asegúrate de usar la versión más reciente -->
+      </dependency>
+      <dependency>
           <groupId>org.openjfx</groupId>
           <artifactId>javafx-fxml</artifactId>
           <version>22-ea+16</version>

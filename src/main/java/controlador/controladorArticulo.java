@@ -55,6 +55,17 @@ public class controladorArticulo implements Initializable {
     }
 
     @FXML
+    void clk_eliminarArticulo(ActionEvent event) {
+
+    }
+
+    @FXML
+    void clk_modificararticulo(ActionEvent event) {
+
+    }
+
+
+    @FXML
     void clk_crearArticulo(ActionEvent event) {
         String cp="";
         String desc="";
