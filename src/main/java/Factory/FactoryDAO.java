@@ -1,9 +1,8 @@
-package com.onlinestore.onlinestore_producto5.Factory;
+package Factory;
 
-import com.onlinestore.onlinestore_producto5.ConexionMySQL.ConexionMySQL;
-import com.onlinestore.onlinestore_producto5.ConexionMySQL.DatabaseConnectionException;
-import com.onlinestore.onlinestore_producto5.DAO.*;
-import com.onlinestore.onlinestore_producto5.modelo.*;
+import ConexionMySQL.ConexionMySQL;
+import ConexionMySQL.DatabaseConnectionException;
+import DAO.*;
 import org.hibernate.SessionFactory;
 
 import java.sql.Connection;
@@ -52,7 +51,7 @@ public class FactoryDAO {
      */
     public SessionFactory MySQLArticulo()  {
         SessionFactory ConexionArticulo = null;
-        ConexionArticulo = ConexionMySQL.conectarMySQL(com.onlinestore.onlinestore_producto5.modelo.Articulo.class);
+        ConexionArticulo = ConexionMySQL.conectarMySQL(modelo.Articulo.class);
 
         return ConexionArticulo;
     }
@@ -63,7 +62,7 @@ public class FactoryDAO {
      */
     public SessionFactory MySQLCliente()  {
         SessionFactory ConexionCliente = null;
-        ConexionCliente = ConexionMySQL.conectarMySQL(com.onlinestore.onlinestore_producto5.modelo.Cliente.class);
+        ConexionCliente = ConexionMySQL.conectarMySQL(modelo.Cliente.class);
 
         return ConexionCliente;
     }
@@ -74,7 +73,7 @@ public class FactoryDAO {
      */
     public SessionFactory MySQLPedido()  {
         SessionFactory ConexionPedido = null;
-        ConexionPedido = ConexionMySQL.conectarMySQL(com.onlinestore.onlinestore_producto5.modelo.Pedido.class);
+        ConexionPedido = ConexionMySQL.conectarMySQL(modelo.Pedido.class);
 
         return ConexionPedido;
     }

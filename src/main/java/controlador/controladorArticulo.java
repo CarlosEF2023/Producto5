@@ -1,7 +1,6 @@
-package com.onlinestore.onlinestore_producto5.controlador;
+package controlador;
 
-import com.onlinestore.onlinestore_producto5.ConexionMySQL.DatabaseConnectionException;
-import com.onlinestore.onlinestore_producto5.Factory.FactoryDAO;
+import ConexionMySQL.DatabaseConnectionException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -11,8 +10,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-import com.onlinestore.onlinestore_producto5.modelo.Articulo;
-import com.onlinestore.onlinestore_producto5.modelo.Datos;
+import modelo.Articulo;
+import modelo.Datos;
 
 import java.net.URL;
 import java.time.Duration;

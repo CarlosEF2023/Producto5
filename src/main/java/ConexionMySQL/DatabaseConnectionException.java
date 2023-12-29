@@ -1,4 +1,4 @@
-package com.onlinestore.onlinestore_producto5.ConexionMySQL;
+package ConexionMySQL;
 
 public class DatabaseConnectionException extends Exception{
 

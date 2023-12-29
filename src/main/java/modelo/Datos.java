@@ -1,7 +1,7 @@
-package com.onlinestore.onlinestore_producto5.modelo;
+package modelo;
 
-import com.onlinestore.onlinestore_producto5.ConexionMySQL.DatabaseConnectionException;
-import com.onlinestore.onlinestore_producto5.Factory.FactoryDAO;
+import ConexionMySQL.DatabaseConnectionException;
+import Factory.FactoryDAO;
 
 import java.util.ArrayList;
 

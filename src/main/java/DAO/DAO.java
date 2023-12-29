@@ -1,4 +1,4 @@
-package com.onlinestore.onlinestore_producto5.DAO;
+package DAO;
 
 import java.util.ArrayList;
 

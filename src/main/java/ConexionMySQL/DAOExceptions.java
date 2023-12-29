@@ -1,4 +1,4 @@
-package com.onlinestore.onlinestore_producto5.ConexionMySQL;
+package ConexionMySQL;
 
 import java.sql.SQLException;
 

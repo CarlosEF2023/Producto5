@@ -1,4 +1,4 @@
-package com.onlinestore.onlinestore_producto5.controlador;
+package controlador;
 
 public class EmailExistsException extends Exception {
 

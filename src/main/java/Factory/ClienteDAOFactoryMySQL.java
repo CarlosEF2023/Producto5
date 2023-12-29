@@ -1,10 +1,10 @@
-package com.onlinestore.onlinestore_producto5.Factory;
+package Factory;
 
 
-import com.onlinestore.onlinestore_producto5.DAO.ClienteDAO;
-import com.onlinestore.onlinestore_producto5.modelo.Cliente;
-import com.onlinestore.onlinestore_producto5.modelo.ClienteEstandar;
-import com.onlinestore.onlinestore_producto5.modelo.ClientePremium;
+import DAO.ClienteDAO;
+import modelo.Cliente;
+import modelo.ClienteEstandar;
+import modelo.ClientePremium;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Root;

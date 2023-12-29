@@ -1,6 +1,5 @@
-package com.onlinestore.onlinestore_producto5.controlador;
+package controlador;
 
-import com.onlinestore.onlinestore_producto5.vista.GestionOS;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

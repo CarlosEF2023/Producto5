@@ -1,6 +1,6 @@
-package com.onlinestore.onlinestore_producto5.DAO;
+package DAO;
 
-import com.onlinestore.onlinestore_producto5.modelo.Pedido;
+import modelo.Pedido;
 
 import java.util.ArrayList;
 

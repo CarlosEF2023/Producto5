@@ -1,4 +1,4 @@
-package com.onlinestore.onlinestore_producto5.ConexionMySQL;
+package ConexionMySQL;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

@@ -1,4 +1,4 @@
-package com.onlinestore.onlinestore_producto5.controlador;
+package controlador;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,32 +10,16 @@ import javafx.stage.Stage;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class controladorCliente implements Initializable {
+public class controladorAlerta implements Initializable {
 
     private Stage stage;
     private Scene scene;
     private Parent root;
 
     @FXML
-    void clk_clientesTodos(ActionEvent event) {
+    void clk_cerraralerta(ActionEvent event) {
 
     }
-
-    @FXML
-    void clk_clientesPremium(ActionEvent event) {
-
-    }
-
-    @FXML
-    void clk_clienteEstandar(ActionEvent event) {
-
-    }
-
-    @FXML
-    void clk_buscarcliente(ActionEvent event) {
-
-    }
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

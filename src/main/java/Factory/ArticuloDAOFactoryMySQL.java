@@ -1,7 +1,7 @@
-package com.onlinestore.onlinestore_producto5.Factory;
+package Factory;
 
-import com.onlinestore.onlinestore_producto5.DAO.ArticuloDAO;
-import com.onlinestore.onlinestore_producto5.modelo.Articulo;
+import DAO.ArticuloDAO;
+import modelo.Articulo;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Root;
@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class ArticuloDAOFactoryMySQL implements ArticuloDAO  {
 
-    private SessionFactory conn;
+    private SessionFactory conn=null;
 
     /**
      * Método para conectar con la BBDD
@@ -33,7 +33,7 @@ public class ArticuloDAOFactoryMySQL implements ArticuloDAO  {
     public String insertar(Articulo a) {
         // Creamos el enlace con la BBDD
         SessionFactory sessionFactory = (SessionFactory) new Configuration().configure("hibernate.cfg.xml")
-                .addAnnotatedClass(com.onlinestore.onlinestore_producto5.modelo.Articulo.class)
+                .addAnnotatedClass(modelo.Articulo.class)
                 .buildSessionFactory();
 
         Session session = sessionFactory.openSession();
@@ -59,7 +59,7 @@ public class ArticuloDAOFactoryMySQL implements ArticuloDAO  {
     @Override
     public void modificar(Articulo a) {
         SessionFactory sessionFactory = (SessionFactory) new Configuration().configure("hibernate.cfg.xml")
-                .addAnnotatedClass(com.onlinestore.onlinestore_producto5.modelo.Articulo.class)
+                .addAnnotatedClass(modelo.Articulo.class)
                 .buildSessionFactory();
 
         Session session = sessionFactory.openSession();
@@ -87,14 +87,14 @@ public class ArticuloDAOFactoryMySQL implements ArticuloDAO  {
     public void eliminar(String cp) {
 
         SessionFactory sessionFactory = (SessionFactory) new Configuration().configure("hibernate.cfg.xml")
-                .addAnnotatedClass(com.onlinestore.onlinestore_producto5.modelo.Articulo.class)
+                .addAnnotatedClass(modelo.Articulo.class)
                 .buildSessionFactory();
 
 
         Session session = sessionFactory.openSession();
         try {
             session.beginTransaction();
-            Articulo a = session.get(com.onlinestore.onlinestore_producto5.modelo.Articulo.class,cp);
+            Articulo a = session.get(modelo.Articulo.class,cp);
 
             session.delete(a);
             session.getTransaction().commit();
@@ -117,7 +117,7 @@ public class ArticuloDAOFactoryMySQL implements ArticuloDAO  {
     public ArrayList<Articulo> obtenerTodos() {
 
         SessionFactory sessionFactory = (SessionFactory) new Configuration().configure("hibernate.cfg.xml")
-                .addAnnotatedClass(com.onlinestore.onlinestore_producto5.modelo.Articulo.class)
+                .addAnnotatedClass(modelo.Articulo.class)
                 .buildSessionFactory();
 
 
@@ -126,7 +126,7 @@ public class ArticuloDAOFactoryMySQL implements ArticuloDAO  {
             session.beginTransaction();
 
             String filtro = "from Articulo";
-            Query<Articulo> query = session.createQuery(filtro, com.onlinestore.onlinestore_producto5.modelo.Articulo.class);
+            Query<Articulo> query = session.createQuery(filtro, modelo.Articulo.class);
             ArrayList<Articulo> articulos = (ArrayList<Articulo>) query.list();
             session.close();
 
@@ -147,12 +147,12 @@ public class ArticuloDAOFactoryMySQL implements ArticuloDAO  {
     @Override
     public Articulo obtenerUno(String id) {
         SessionFactory sessionFactory = (SessionFactory) new Configuration().configure("hibernate.cfg.xml")
-                .addAnnotatedClass(com.onlinestore.onlinestore_producto5.modelo.Articulo.class).buildSessionFactory();
+                .addAnnotatedClass(modelo.Articulo.class).buildSessionFactory();
 
         Session session = sessionFactory.openSession();
         try {
             session.beginTransaction();
-            Articulo a = session.get(com.onlinestore.onlinestore_producto5.modelo.Articulo.class,id);
+            Articulo a = session.get(modelo.Articulo.class,id);
 
             session.close();
 
@@ -175,7 +175,7 @@ public class ArticuloDAOFactoryMySQL implements ArticuloDAO  {
     public ArrayList<Articulo> obtenerPorCriterio(String columna, String criterio) {
 
         SessionFactory sessionFactory = (SessionFactory) new Configuration().configure("hibernate.cfg.xml")
-                .addAnnotatedClass(com.onlinestore.onlinestore_producto5.modelo.Articulo.class).buildSessionFactory();
+                .addAnnotatedClass(modelo.Articulo.class).buildSessionFactory();
 
         Session session = sessionFactory.openSession();
 
@@ -184,8 +184,8 @@ public class ArticuloDAOFactoryMySQL implements ArticuloDAO  {
             session.beginTransaction();
 
             CriteriaBuilder builder = session.getCriteriaBuilder();
-            CriteriaQuery<Articulo> criteriaQuery = builder.createQuery(com.onlinestore.onlinestore_producto5.modelo.Articulo.class);
-            Root<Articulo> root = criteriaQuery.from(com.onlinestore.onlinestore_producto5.modelo.Articulo.class);
+            CriteriaQuery<Articulo> criteriaQuery = builder.createQuery(modelo.Articulo.class);
+            Root<Articulo> root = criteriaQuery.from(modelo.Articulo.class);
 
             // Agregar la cláusula WHERE
             criteriaQuery.where(builder.equal(root.get(columna), criterio));
