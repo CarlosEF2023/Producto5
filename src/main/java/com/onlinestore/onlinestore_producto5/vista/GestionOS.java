@@ -22,10 +22,8 @@ public class GestionOS extends Application {
     public void start(Stage stage) throws IOException {
         // set up the scene
         try{
-            this.root = FXMLLoader.load(getClass().getResource("/menuinicial.fxml"));
+            this.root = FXMLLoader.load(getClass().getResource("/login.fxml"));
             Scene scene = new Scene(this.root);
-            Image icon = new Image("logo.jpeg");
-            stage.getIcons().add(icon);
             stage.resizableProperty().setValue(true);
             stage.setMaximized(false);
             stage.setTitle("OnlineStore");
