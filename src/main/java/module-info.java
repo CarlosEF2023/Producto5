@@ -6,11 +6,15 @@ module com.onlinestore.onlinestore_producto {
     requires jakarta.persistence;
     requires org.hibernate.orm.core;
     requires java.naming;
+    requires javaee.api;
 
     opens com.onlinestore.onlinestore_producto5 to javafx.fxml;
     exports com.onlinestore.onlinestore_producto5;
-    exports com.onlinestore.onlinestore_producto5.vista;
-    opens com.onlinestore.onlinestore_producto5.vista to javafx.fxml;
+    exports vista;
+    opens vista to javafx.fxml;
     exports controlador;
     opens controlador to javafx.fxml;
+    exports modelo;
+    opens modelo to org.hibernate.orm.core;
+
 }

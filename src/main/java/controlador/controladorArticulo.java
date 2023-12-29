@@ -12,7 +12,9 @@ import javafx.stage.Stage;
 
 import modelo.Articulo;
 import modelo.Datos;
+import org.hibernate.SessionFactory;
 
+import java.lang.module.Configuration;
 import java.net.URL;
 import java.time.Duration;
 import java.util.ResourceBundle;

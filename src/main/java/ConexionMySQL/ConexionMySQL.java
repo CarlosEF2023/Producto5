@@ -12,7 +12,6 @@ public class ConexionMySQL {
      */
     public static SessionFactory conectarMySQL(Class<?> claseEntidad) {
         try {
-
             //   addAnnotatedClass(Articulo.class).buildSessionFactory();
             Configuration configuration = new Configuration().configure("hibernate.cfg.xml");
 

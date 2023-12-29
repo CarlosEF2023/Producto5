@@ -1,4 +1,4 @@
-package com.onlinestore.onlinestore_producto5.vista;
+package vista;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -6,8 +6,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-
-import java.util.Objects;
 
 import java.io.IOException;
 

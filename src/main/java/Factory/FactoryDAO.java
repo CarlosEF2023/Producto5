@@ -3,6 +3,9 @@ package Factory;
 import ConexionMySQL.ConexionMySQL;
 import ConexionMySQL.DatabaseConnectionException;
 import DAO.*;
+import modelo.Articulo;
+import modelo.Cliente;
+import modelo.Pedido;
 import org.hibernate.SessionFactory;
 
 import java.sql.Connection;
@@ -51,7 +54,7 @@ public class FactoryDAO {
      */
     public SessionFactory MySQLArticulo()  {
         SessionFactory ConexionArticulo = null;
-        ConexionArticulo = ConexionMySQL.conectarMySQL(modelo.Articulo.class);
+        ConexionArticulo = ConexionMySQL.conectarMySQL(Articulo.class);
 
         return ConexionArticulo;
     }
@@ -62,7 +65,7 @@ public class FactoryDAO {
      */
     public SessionFactory MySQLCliente()  {
         SessionFactory ConexionCliente = null;
-        ConexionCliente = ConexionMySQL.conectarMySQL(modelo.Cliente.class);
+        ConexionCliente = ConexionMySQL.conectarMySQL(Cliente.class);
 
         return ConexionCliente;
     }
@@ -73,7 +76,7 @@ public class FactoryDAO {
      */
     public SessionFactory MySQLPedido()  {
         SessionFactory ConexionPedido = null;
-        ConexionPedido = ConexionMySQL.conectarMySQL(modelo.Pedido.class);
+        ConexionPedido = ConexionMySQL.conectarMySQL(Pedido.class);
 
         return ConexionPedido;
     }

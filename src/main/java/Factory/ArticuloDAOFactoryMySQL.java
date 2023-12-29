@@ -12,7 +12,7 @@ import org.hibernate.query.Query;
 
 import java.util.ArrayList;
 
-public class ArticuloDAOFactoryMySQL implements ArticuloDAO  {
+public class ArticuloDAOFactoryMySQL implements ArticuloDAO{
 
     private SessionFactory conn=null;
 
@@ -33,7 +33,7 @@ public class ArticuloDAOFactoryMySQL implements ArticuloDAO  {
     public String insertar(Articulo a) {
         // Creamos el enlace con la BBDD
         SessionFactory sessionFactory = (SessionFactory) new Configuration().configure("hibernate.cfg.xml")
-                .addAnnotatedClass(modelo.Articulo.class)
+                .addAnnotatedClass(Articulo.class)
                 .buildSessionFactory();
 
         Session session = sessionFactory.openSession();
@@ -59,7 +59,7 @@ public class ArticuloDAOFactoryMySQL implements ArticuloDAO  {
     @Override
     public void modificar(Articulo a) {
         SessionFactory sessionFactory = (SessionFactory) new Configuration().configure("hibernate.cfg.xml")
-                .addAnnotatedClass(modelo.Articulo.class)
+                .addAnnotatedClass(Articulo.class)
                 .buildSessionFactory();
 
         Session session = sessionFactory.openSession();
@@ -87,14 +87,14 @@ public class ArticuloDAOFactoryMySQL implements ArticuloDAO  {
     public void eliminar(String cp) {
 
         SessionFactory sessionFactory = (SessionFactory) new Configuration().configure("hibernate.cfg.xml")
-                .addAnnotatedClass(modelo.Articulo.class)
+                .addAnnotatedClass(Articulo.class)
                 .buildSessionFactory();
 
 
         Session session = sessionFactory.openSession();
         try {
             session.beginTransaction();
-            Articulo a = session.get(modelo.Articulo.class,cp);
+            Articulo a = session.get(Articulo.class,cp);
 
             session.delete(a);
             session.getTransaction().commit();
@@ -117,7 +117,7 @@ public class ArticuloDAOFactoryMySQL implements ArticuloDAO  {
     public ArrayList<Articulo> obtenerTodos() {
 
         SessionFactory sessionFactory = (SessionFactory) new Configuration().configure("hibernate.cfg.xml")
-                .addAnnotatedClass(modelo.Articulo.class)
+                .addAnnotatedClass(Articulo.class)
                 .buildSessionFactory();
 
 
@@ -126,7 +126,7 @@ public class ArticuloDAOFactoryMySQL implements ArticuloDAO  {
             session.beginTransaction();
 
             String filtro = "from Articulo";
-            Query<Articulo> query = session.createQuery(filtro, modelo.Articulo.class);
+            Query<Articulo> query = session.createQuery(filtro, Articulo.class);
             ArrayList<Articulo> articulos = (ArrayList<Articulo>) query.list();
             session.close();
 
@@ -147,12 +147,12 @@ public class ArticuloDAOFactoryMySQL implements ArticuloDAO  {
     @Override
     public Articulo obtenerUno(String id) {
         SessionFactory sessionFactory = (SessionFactory) new Configuration().configure("hibernate.cfg.xml")
-                .addAnnotatedClass(modelo.Articulo.class).buildSessionFactory();
+                .addAnnotatedClass(Articulo.class).buildSessionFactory();
 
         Session session = sessionFactory.openSession();
         try {
             session.beginTransaction();
-            Articulo a = session.get(modelo.Articulo.class,id);
+            Articulo a = session.get(Articulo.class,id);
 
             session.close();
 
@@ -175,7 +175,7 @@ public class ArticuloDAOFactoryMySQL implements ArticuloDAO  {
     public ArrayList<Articulo> obtenerPorCriterio(String columna, String criterio) {
 
         SessionFactory sessionFactory = (SessionFactory) new Configuration().configure("hibernate.cfg.xml")
-                .addAnnotatedClass(modelo.Articulo.class).buildSessionFactory();
+                .addAnnotatedClass(Articulo.class).buildSessionFactory();
 
         Session session = sessionFactory.openSession();
 
@@ -184,8 +184,8 @@ public class ArticuloDAOFactoryMySQL implements ArticuloDAO  {
             session.beginTransaction();
 
             CriteriaBuilder builder = session.getCriteriaBuilder();
-            CriteriaQuery<Articulo> criteriaQuery = builder.createQuery(modelo.Articulo.class);
-            Root<Articulo> root = criteriaQuery.from(modelo.Articulo.class);
+            CriteriaQuery<Articulo> criteriaQuery = builder.createQuery(Articulo.class);
+            Root<Articulo> root = criteriaQuery.from(Articulo.class);
 
             // Agregar la cláusula WHERE
             criteriaQuery.where(builder.equal(root.get(columna), criterio));
