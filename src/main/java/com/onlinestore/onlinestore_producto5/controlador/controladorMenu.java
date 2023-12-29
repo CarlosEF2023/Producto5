@@ -26,48 +26,48 @@ public class controladorMenu implements Initializable  {
     private AnchorPane content;
 
     @FXML
-    void clk_acercade(ActionEvent event) {
-
+    void clk_acercade(ActionEvent event) throws IOException  {
+        switchscene(event, "/acercade.fxml");
     }
 
     @FXML
-    void clk_buscararticulo(ActionEvent event) {
-
+    void clk_buscararticulo(ActionEvent event) throws IOException  {
+        switchscene(event, "/frmlistararticulos.fxml");
     }
 
     @FXML
-    void clk_buscarcliente(ActionEvent event) {
-
+    void clk_buscarcliente(ActionEvent event) throws IOException  {
+        switchscene(event, "/frmlistarclientes.fxml");
     }
 
     @FXML
-    void clk_buscarpedido(ActionEvent event) {
-
+    void clk_buscarpedido(ActionEvent event) throws IOException  {
+        switchscene(event, "/frmlistarpedidos.fxml");
     }
 
     @FXML
-    void clk_editararticulo(ActionEvent event) {
-
+    void clk_editararticulo(ActionEvent event) throws IOException  {
+        switchscene(event, "/frmmodificararticulo.fxml");
     }
 
     @FXML
-    void clk_editarcliente(ActionEvent event) {
-
+    void clk_editarcliente(ActionEvent event)  throws IOException {
+        switchscene(event, "/frmmodificarcliente.fxml");
     }
 
     @FXML
-    void clk_eliminararticulo(ActionEvent event) {
-
+    void clk_eliminararticulo(ActionEvent event) throws IOException {
+        switchscene(event, "/frmeliminararticulo.fxml");
     }
 
     @FXML
-    void clk_eliminarcliente(ActionEvent event) {
-
+    void clk_eliminarcliente(ActionEvent event) throws IOException {
+        switchscene(event, "/frmeliminarcliente.fxml");
     }
 
     @FXML
-    void clk_eliminarpedido(ActionEvent event) {
-
+    void clk_eliminarpedido(ActionEvent event) throws IOException  {
+        switchscene(event, "/frmeliminarpedido.fxml");
     }
 
     @FXML
@@ -86,23 +86,23 @@ public class controladorMenu implements Initializable  {
     }
 
     @FXML
-    void clk_listaestandar(ActionEvent event) {
-
+    void clk_listaestandar(ActionEvent event)  throws IOException {
+        // TODO
     }
 
     @FXML
-    void clk_listapremium(ActionEvent event) {
-
+    void clk_listapremium(ActionEvent event)  throws IOException {
+        // TODO
     }
 
     @FXML
-    void clk_listarenviados(ActionEvent event) {
-
+    void clk_listarenviados(ActionEvent event)  throws IOException {
+        // TODO
     }
 
     @FXML
-    void clk_listarpendientes(ActionEvent event) {
-
+    void clk_listarpendientes(ActionEvent event) throws IOException  {
+        // TODO
     }
 
     @FXML
@@ -117,32 +117,17 @@ public class controladorMenu implements Initializable  {
 
     @FXML
     void clk_mostrartodospedidos(ActionEvent event) throws IOException {
-        switchscene(event, "/frmlistarclientes.fxml");
+        switchscene(event, "/frmlistarpedidos.fxml");
     }
 
     @FXML
-    void clk_salir(ActionEvent event) {
+    void clk_salir(ActionEvent event)  throws IOException {
         Platform.exit();
         System.exit(0);
     }
 
 
     // -----------------------------
-    @FXML
-    void clk_articulo(ActionEvent event) {
-
-    }
-
-    @FXML
-    void clk_cliente(ActionEvent event) {
-
-    }
-
-    @FXML
-    void clk_pedido(ActionEvent event) {
-
-    }
-
     public void initialize(URL location, ResourceBundle resources){
         // Podemos crear los eventos aquí dentro.
 
