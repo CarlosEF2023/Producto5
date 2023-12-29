@@ -1,5 +1,6 @@
 package com.onlinestore.onlinestore_producto5.controlador;
 
+import com.onlinestore.onlinestore_producto5.vista.GestionOS;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,6 +10,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -133,6 +136,24 @@ public class controladorMenu implements Initializable  {
 
     }
 
+    public void switchscene_old(ActionEvent event, String formulario) throws IOException {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(formulario));
+            VBox vbox = loader.load();
+            scene = new Scene(vbox);
+            stage.setScene(scene);
+            stage.initOwner(root.getScene().getWindow());
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setResizable(false);
+            stage.setIconified(false);
+            stage.showAndWait();
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+
     public void switchscene(ActionEvent event, String formulario) throws IOException {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(formulario));
@@ -140,6 +161,7 @@ public class controladorMenu implements Initializable  {
             scene = new Scene(root);
             Image icon = new Image("logo.jpeg");
             stage.getIcons().add(icon);
+            stage.resizableProperty().setValue(false);  // Para hacer que se haga grande.
             stage.setScene(scene);
             stage.show();
 
@@ -147,5 +169,4 @@ public class controladorMenu implements Initializable  {
             e.printStackTrace();
         }
     }
-
 }

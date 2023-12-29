@@ -1,13 +1,21 @@
 package com.onlinestore.onlinestore_producto5.controlador;
 
+import com.onlinestore.onlinestore_producto5.ConexionMySQL.DatabaseConnectionException;
+import com.onlinestore.onlinestore_producto5.Factory.FactoryDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import com.onlinestore.onlinestore_producto5.modelo.Articulo;
+import com.onlinestore.onlinestore_producto5.modelo.Datos;
+
 import java.net.URL;
+import java.time.Duration;
 import java.util.ResourceBundle;
 
 public class controladorArticulo implements Initializable {
@@ -16,22 +24,27 @@ public class controladorArticulo implements Initializable {
     private Scene scene;
     private Parent root;
 
-    @FXML
-    void creararticulo(ActionEvent event) {
-
-    }
-    @FXML
-    void articulosalir(ActionEvent event) {
-
-    }
+    private Datos datos;
 
     @FXML
-    void clk_creararticulo(ActionEvent event) {
-
-    }
+    private Button btn_creararticulo;
 
     @FXML
-    void clk_salir(ActionEvent event) {
+    private TextField cpArticulo;
+
+    @FXML
+    private TextField descripcionArticulo;
+
+    @FXML
+    private TextField precioArticulo;
+
+    @FXML
+    private TextField tiempopreparacionArticulo;
+
+
+    public controladorArticulo() throws DatabaseConnectionException {
+
+        this.datos = new Datos();
 
     }
 
@@ -42,7 +55,33 @@ public class controladorArticulo implements Initializable {
 
     @FXML
     void clk_crearArticulo(ActionEvent event) {
+        String cp="";
+        String desc="";
+        double precio=0.0;
+        String tiempo="";
+        Duration tiempoPrep = null;
 
+        cp = cpArticulo.getText();
+        desc = descripcionArticulo.getText();
+        precio = Double.parseDouble(precioArticulo.getText());
+        tiempo = tiempopreparacionArticulo.getText();
+        String[] partes = tiempo.split(":");
+        if (partes.length == 2){
+            try{
+                int horas = Integer.parseInt(partes[0]);
+                int minutos = Integer.parseInt(partes[1]);
+                tiempoPrep = Duration.ofHours(horas).plusMinutes(minutos);
+
+                // -------------------------------------------------------------
+                Articulo art = new Articulo(cp, desc, precio, tiempoPrep);
+                datos.agregarArticulo(art);
+                // -------------------------------------------------------------
+
+            }catch(NumberFormatException e){
+                System.out.println("La hora no es valida");
+            }
+
+        }
     }
 
 

@@ -14,17 +14,20 @@ import java.io.IOException;
 
 public class GestionOS extends Application {
 
-    public static Stage currentStage;
+    public Stage currentStage;
+    public Scene scene;
+    public Parent root;
 
     @Override
     public void start(Stage stage) throws IOException {
         // set up the scene
         try{
-            Parent root = FXMLLoader.load(getClass().getResource("/menuinicial.fxml"));
-            Scene scene = new Scene(root);
+            this.root = FXMLLoader.load(getClass().getResource("/menuinicial.fxml"));
+            Scene scene = new Scene(this.root);
             Image icon = new Image("logo.jpeg");
             stage.getIcons().add(icon);
-            stage.resizableProperty().setValue(false);
+            stage.resizableProperty().setValue(true);
+            stage.setMaximized(false);
             stage.setTitle("OnlineStore");
             stage.setScene(scene);
             stage.show();
