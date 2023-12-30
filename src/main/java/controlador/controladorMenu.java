@@ -7,14 +7,18 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import modelo.Articulo;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.Duration;
 import java.util.ResourceBundle;
 
 
@@ -110,6 +114,7 @@ public class controladorMenu implements Initializable  {
     @FXML
     void clk_mostrartodosarticulos(ActionEvent event) throws IOException {
         switchscene(event, "/frmlistararticulos.fxml");
+
     }
 
     @FXML
