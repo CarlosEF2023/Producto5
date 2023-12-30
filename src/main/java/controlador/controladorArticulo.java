@@ -64,7 +64,6 @@ public class controladorArticulo implements Initializable {
 
     }
 
-
     @FXML
     void clk_crearArticulo(ActionEvent event) {
         String cp="";
@@ -92,10 +91,8 @@ public class controladorArticulo implements Initializable {
             }catch(NumberFormatException e){
                 System.out.println("La hora no es valida");
             }
-
         }
     }
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

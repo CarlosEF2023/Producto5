@@ -1,8 +1,10 @@
 package controlador;
 
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -18,4 +20,13 @@ public class controladorPedido implements Initializable  {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
+
+    @FXML
+    private TextField Fechapedido;
+
+    @FXML
+    private TextField numeropedido;
+
+
+
 }
