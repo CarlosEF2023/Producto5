@@ -186,4 +186,25 @@ public class Datos {
         return this.factory.pedido.obtenerUno(cp);
     }
 
+    public boolean verificarusuario(String user){
+
+        boolean encontrado=false;
+
+        Usuario check = this.factory.usuario.obtenerUno(user);
+
+        if (check!=null){
+
+            encontrado = true;
+
+        }
+
+        return encontrado;
+    }
+
+    public Usuario obtenerUnUsuario(String id){
+
+        return this.factory.usuario.obtenerUno(id);
+
+    }
+
 }

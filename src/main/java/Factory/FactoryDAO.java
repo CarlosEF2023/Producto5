@@ -13,6 +13,7 @@ public class FactoryDAO {
     public ArticuloDAO articulo;
     public PedidoDAO pedido;
     public ClienteDAO cliente;
+    public UsuarioDAO usuario;
 
     /**
      * Método que activa las conexiones en la BBDD dependiendo del tipo de BBDD. En nuestro caso MySQL
@@ -29,6 +30,9 @@ public class FactoryDAO {
 
             SessionFactory pedido = MySQLPedido();
             this.pedido = new PedidoDAOFactoryMySQL(pedido);
+
+            SessionFactory usuario = MySQLUsuario();
+            this.usuario = new LoginDAOFactoryMySQL(usuario);
 
         }catch(Exception e){
             System.out.println(e);
@@ -54,6 +58,17 @@ public class FactoryDAO {
         ConexionArticulo = ConexionMySQL.conectarMySQL(modelo.Articulo.class);
 
         return ConexionArticulo;
+    }
+
+    /**
+     * Método que conecta con la tabla usuario de la BBDD
+     * @return Conexión a la BBDD
+     */
+    public SessionFactory MySQLUsuario()  {
+        SessionFactory ConexionUsuario = null;
+        ConexionUsuario = ConexionMySQL.conectarMySQL(modelo.Usuario.class);
+
+        return ConexionUsuario;
     }
 
     /**
